@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro?</title>
+    <style>
+        h1{
+            background-color: rgba(0, 255, 255, 0.39);
+        }
+    </style>
+</head>
+<body>
+    <h1>Estrangeiro?</h1>
+    Digite em que pais você nasceu <input type="text" id="pais">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <p></p>
+    <div id = 'res'>
+
+    </div>
+
+    <script>
+        function clicar(){
+            var txt = window.document.querySelector("input#pais")
+            var res = window.document.querySelector("div#res")
+            res.innerHTML = 'Parabéns'
+            var txtv = txt.value
+        
+            if (txtv != 'Brasil')
+            {
+                res.innerText += ` você é estrangeiro!`
+            }
+            else 
+            {
+                res.innerText += ` você é Brasileiro!`
+            }
+        }
+    </script>
+</body>
+</html>
